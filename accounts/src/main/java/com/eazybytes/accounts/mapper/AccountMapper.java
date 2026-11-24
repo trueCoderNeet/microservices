@@ -1,0 +1,23 @@
+package com.eazybytes.accounts.mapper;
+
+import com.eazybytes.accounts.dto.AccountsDto;
+import com.eazybytes.accounts.entity.Accounts;
+
+public class AccountMapper {
+
+    public static AccountsDto mapToAccountDto(Accounts accounts,AccountsDto accountsDto){
+        accountsDto.setAccountNumber(accounts.getAccountNumber());
+        accountsDto.setAccountType(accounts.getAccountType());
+        accountsDto.setBranchAddress(accounts.getBranchAddress());
+        //accountsDto.setMobileNumber(accounts.getMobileNumber());
+        return accountsDto;
+    }
+
+    public static Accounts mapToAccount(AccountsDto accountsDto,Accounts accounts){
+        accounts.setAccountNumber(accountsDto.getAccountNumber());
+        accounts.setAccountType(accountsDto.getAccountType());
+        accounts.setBranchAddress(accountsDto.getBranchAddress());
+        //accounts.setMobileNumber(accountsDto.getMobileNumber());
+        return accounts;
+    }
+}
